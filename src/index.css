@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .title {
+    @apply text-[26px] md:text-3xl 2xl:text-5xl text-primary font-bold;
+  }
+
+  .btn {
+    @apply text-primary text-base 2xl:text-xl font-semibold px-4 py-2 rounded-lg duration-300 hover:scale-110 my-shadow2;
+  }
+}
+
+.my-shadow {
+  box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.2),
+    inset -5px -5px 5px rgba(255, 255, 255, 0.8);
+  /* color: rgba(165, 29, 45, 0.3); */
+}
+
+.my-shadow2 {
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3),
+    -5px -5px 5px rgba(255, 255, 255, 0.8);
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.move {
+  animation: move 2s linear infinite alternate-reverse;
+}
+
+@keyframes move {
+  0% {
+    translate: -1rem -1rem;
+  }
+  100% {
+    translate: 1rem 1rem;
+  }
+}
